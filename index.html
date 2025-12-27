@@ -2,32 +2,85 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi Tienda Económica</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tienda Online | Inicio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Mi Tienda Online</h1>
+        <h1>🛒 Mi Tienda Digital</h1>
+        <p>Productos exclusivos a un clic</p>
     </header>
 
     <main>
         <section id="productos">
-            <div class="producto">
-                <img src="https://via.placeholder.com/150" alt="Producto">
-                <h3>Camiseta Pro</h3>
-                <p>Precio: $<span>20</span></p>
-                <button class="btn-add" data-id="1" data-nombre="Camiseta Pro" data-precio="20">Añadir al Carrito</button>
-            </div>
+            <article class="producto">
+                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80" alt="Reloj Inteligente">
+                <h3>Reloj Inteligente</h3>
+                <p>Elegante y funcional.</p>
+                <div class="precio-tag">$199.00</div>
+                <button class="btn-add" 
+                        data-id="1" 
+                        data-nombre="Reloj Inteligente" 
+                        data-precio="199">
+                    Añadir al Carrito
+                </button>
+            </article>
+
+            <article class="producto">
+                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="Audífonos Premium">
+                <h3>Audífonos Pro</h3>
+                <p>Sonido de alta fidelidad.</p>
+                <div class="precio-tag">$89.00</div>
+                <button class="btn-add" 
+                        data-id="2" 
+                        data-nombre="Audífonos Pro" 
+                        data-precio="89">
+                    Añadir al Carrito
+                </button>
+            </article>
+
+            <article class="producto">
+                <img src="https://images.unsplash.com/photo-1526170315870-ef6897348226?auto=format&fit=crop&w=300&q=80" alt="Cámara Vintage">
+                <h3>Cámara Vintage</h3>
+                <p>Captura momentos únicos.</p>
+                <div class="precio-tag">$150.00</div>
+                <button class="btn-add" 
+                        data-id="3" 
+                        data-nombre="Cámara Vintage" 
+                        data-precio="150">
+                    Añadir al Carrito
+                </button>
+            </article>
         </section>
 
         <aside id="carrito-container">
-            <h2>Tu Carrito</h2>
-            <ul id="lista-carrito">
+            <h2>Tu Pedido</h2>
+            <div class="carrito-body">
+                <ul id="lista-carrito">
+                    <p style="color: #64748b; text-align: center;">El carrito está vacío</p>
                 </ul>
-            <p>Total: $<span id="total-pago">0</span></p>
-            <button id="vaciar-carrito">Vaciar</button>
+                
+                <hr>
+                
+                <div class="total-container">
+                    <span>Total a pagar:</span>
+                    <span>$<span id="total-pago">0.00</span></span>
+                </div>
+
+                <button id="vaciar-carrito">Limpiar Carrito</button>
+                
+                <button id="btn-checkout" style="background-color: #10b981; color: white; border: none; width: 100%; padding: 1rem; border-radius: 6px; margin-top: 10px; cursor: pointer; font-weight: bold;">
+                    Finalizar Compra
+                </button>
+            </div>
         </aside>
     </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Tienda Online - Creado con Código Propio</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
