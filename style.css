@@ -1,132 +1,149 @@
-/* Configuraciones Básicas */
+/* Paleta de colores inspirada en Studio3DW */
 :root {
-    --primario: #2563eb;
-    --secundario: #1e293b;
-    --fondo: #f8fafc;
-    --blanco: #ffffff;
-    --acento: #ef4444;
+    --primario: #000000; /* Elegancia y profesionalismo */
+    --acento: #3d3d3d;
+    --fondo: #fcfcfc;
+    --texto: #1a1a1a;
+    --gris-suave: #f4f4f4;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--texto);
     background-color: var(--fondo);
     margin: 0;
-    color: var(--secundario);
 }
 
-header {
-    background-color: var(--secundario);
-    color: var(--blanco);
-    padding: 1.5rem;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Contenedor Principal (Grid de 2 columnas) */
-main {
-    display: grid;
-    grid-template-columns: 1fr 350px;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Responsive: si la pantalla es pequeña, una sola columna */
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Sección de Productos */
-#productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.producto {
-    background: var(--blanco);
-    padding: 1rem;
-    border-radius: 12px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
-}
-
-.producto:hover {
-    transform: translateY(-5px);
-}
-
-.producto img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 1rem;
-}
-
-/* Botones */
-.btn-add {
-    background-color: var(--primario);
-    color: white;
-    border: none;
-    padding: 0.7rem 1.2rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    width: 100%;
-}
-
-.btn-add:hover {
-    background-color: #1d4ed8;
-}
-
-/* Estilos del Carrito */
-#carrito-container {
-    background: var(--blanco);
-    padding: 1.5rem;
-    border-radius: 12px;
-    height: fit-content;
-    position: sticky;
-    top: 2rem;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-}
-
-#lista-carrito {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
-    border-top: 1px solid #e2e8f0;
-}
-
-#lista-carrito li {
-    padding: 0.8rem 0;
-    border-bottom: 1px solid #e2e8f0;
+/* Navegación */
+.navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background: white;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--texto);
+    font-weight: 500;
     font-size: 0.9rem;
 }
 
-.total-container {
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 1rem;
+.btn-solicitar {
+    background: var(--primario);
+    color: white !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 4px;
+}
+
+/* Hero Section */
+.hero {
+    height: 60vh;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: var(--gris-suave);
+    padding: 0 10%;
 }
 
-#vaciar-carrito {
-    background: transparent;
-    color: var(--acento);
-    border: 1px solid var(--acento);
-    padding: 0.5rem;
-    width: 100%;
-    margin-top: 1rem;
-    cursor: pointer;
-    border-radius: 6px;
+.badge {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border: 1px solid var(--texto);
+    padding: 4px 12px;
+    display: inline-block;
+    margin-bottom: 1rem;
 }
 
-#vaciar-carrito:hover {
-    background: var(--acento);
+.hero h1 {
+    font-size: 4rem;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* Secciones Generales */
+.container {
+    padding: 5rem 10%;
+}
+
+h2 {
+    font-size: 2rem;
+    border-left: 4px solid var(--primario);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Grid de Trabajo (Background/Solution) */
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border: 1px solid #eee;
+}
+
+.card-number {
+    font-size: 0.8rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+}
+
+/* Galería de Conceptos */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    padding: 0 10%;
+}
+
+.gallery-item {
+    background: var(--primario);
     color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.gallery-item:hover {
+    background: var(--acento);
+}
+
+/* Carrito Estilo Studio3DW */
+#carrito-container {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 300px;
+    background: white;
+    border: 2px solid var(--primario);
+    padding: 1.5rem;
+    box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
 }
