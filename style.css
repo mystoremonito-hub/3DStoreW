@@ -1,28 +1,29 @@
 /* Paleta de colores inspirada en Studio3DW */
 :root {
-    --primario: #000000; /* Elegancia y profesionalismo */
+    --primario: #000000; /* Negro sólido para un look de estudio premium */
     --acento: #3d3d3d;
-    --fondo: #fcfcfc;
+    --fondo: #ffffff;
     --texto: #1a1a1a;
     --gris-suave: #f4f4f4;
+    --oro: #D4AF37; /* Toque de distinción para premios/ofertas */
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: var(--texto);
     background-color: var(--fondo);
     margin: 0;
 }
 
-/* Navegación */
+/* Navegación Profesional [cite: 1, 2, 5] */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 5%;
     background: white;
-    border-bottom: 1px solid #eee;
+    border-bottom: 2px solid var(--primario);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -30,120 +31,124 @@ body {
 
 .logo {
     font-weight: 900;
-    font-size: 1.5rem;
-    letter-spacing: -1px;
+    font-size: 1.8rem;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--texto);
-    font-weight: 500;
-    font-size: 0.9rem;
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
 }
 
 .btn-solicitar {
     background: var(--primario);
     color: white !important;
-    padding: 0.6rem 1.2rem;
-    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 0px; /* Estilo arquitectónico de los 80 */
+    transition: 0.3s;
 }
 
-/* Hero Section */
+.btn-solicitar:hover {
+    background: var(--acento);
+}
+
+/* Hero Section [cite: 3, 4, 47] */
 .hero {
-    height: 60vh;
+    height: 70vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: var(--gris-suave);
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), 
+                url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070') center/cover;
     padding: 0 10%;
 }
 
 .badge {
-    font-size: 0.7rem;
-    letter-spacing: 2px;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
     font-weight: bold;
-    border: 1px solid var(--texto);
-    padding: 4px 12px;
-    display: inline-block;
-    margin-bottom: 1rem;
+    color: var(--oro);
+    border: 2px solid var(--oro);
+    padding: 6px 16px;
+    margin-bottom: 1.5rem;
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin: 0;
-    text-transform: uppercase;
+    line-height: 0.9;
+    letter-spacing: -2px;
 }
 
-/* Secciones Generales */
-.container {
-    padding: 5rem 10%;
-}
-
-h2 {
-    font-size: 2rem;
-    border-left: 4px solid var(--primario);
-    padding-left: 1rem;
-    margin-bottom: 2rem;
-}
-
-/* Grid de Trabajo (Background/Solution) */
+/* Estructura de Trabajo: Background & Solution [cite: 12, 15, 25, 30] */
 .work-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
+    gap: 0; /* Unión perfecta para diseño minimalista */
+    border: 1px solid var(--primario);
 }
 
 .card {
-    background: white;
-    padding: 2rem;
-    border: 1px solid #eee;
+    padding: 4rem 3rem;
+    border: 1px solid var(--primario);
 }
 
 .card-number {
-    font-size: 0.8rem;
-    color: #999;
-    margin-bottom: 0.5rem;
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--gris-suave);
+    line-height: 1;
+    margin-bottom: 1rem;
 }
 
-/* Galería de Conceptos */
+/* Galería de Conceptos [cite: 48, 50, 51] */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    padding: 0 10%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
 }
 
 .gallery-item {
+    aspect-ratio: 1;
     background: var(--primario);
     color: white;
-    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: 0.3s;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.4s ease;
 }
 
 .gallery-item:hover {
-    background: var(--acento);
+    filter: invert(1);
 }
 
-/* Carrito Estilo Studio3DW */
+/* Carrito Estilo Boutique [cite: 21] */
 #carrito-container {
     position: fixed;
-    right: 20px;
-    bottom: 20px;
-    width: 300px;
+    right: 30px;
+    bottom: 30px;
+    width: 320px;
     background: white;
-    border: 2px solid var(--primario);
-    padding: 1.5rem;
-    box-shadow: 10px 10px 0px rgba(0,0,0,0.1);
+    border: 3px solid var(--primario);
+    padding: 2rem;
+    box-shadow: 15px 15px 0px var(--gris-suave);
 }
+
