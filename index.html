@@ -3,83 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Tienda Online | Inicio</title>
+    <title>Studio3DW | Diseño y Creación</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>🛒 Mi Tienda Digital</h1>
-        <p>Productos exclusivos a un clic</p>
+    <nav class="navbar">
+        <div class="logo">Studio3DW</div>
+        <ul class="nav-links">
+            <li><a href="#acerca">Acerca de</a></li> <li><a href="#trabajo">Nuestro trabajo</a></li> <li><a href="#diseños">Diseños</a></li> <li><a href="#contacto" class="btn-solicitar">Solicita tu diseño</a></li> </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <span class="badge">OFERTA</span> <h1>Studio 3D</h1> <p>Hacemos realidad tus creaciones</p> </div>
     </header>
 
-    <main>
-        <section id="productos">
-            <article class="producto">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=300&q=80" alt="Reloj Inteligente">
-                <h3>Reloj Inteligente</h3>
-                <p>Elegante y funcional.</p>
-                <div class="precio-tag">$199.00</div>
-                <button class="btn-add" 
-                        data-id="1" 
-                        data-nombre="Reloj Inteligente" 
-                        data-precio="199">
-                    Añadir al Carrito
-                </button>
-            </article>
+    <section id="acerca" class="about-section">
+        <div class="container">
+            <h2>Acerca de Studio3DW</h2> <p>Desde su fundación en los años 80, hemos sido la empresa de referencia para diversas necesidades de diseño. Nuestra oferta abarca desde el diseño gráfico y la estrategia de marca hasta el desarrollo de sitios web y la producción de video.</p>
+            <p>Contamos con una base de clientes global y diversos premios de la industria, estableciendo el estándar para los estudios de diseño[cite: 8, 9].</p>
+        </div>
+    </section>
 
-            <article class="producto">
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=300&q=80" alt="Audífonos Premium">
-                <h3>Audífonos Pro</h3>
-                <p>Sonido de alta fidelidad.</p>
-                <div class="precio-tag">$89.00</div>
-                <button class="btn-add" 
-                        data-id="2" 
-                        data-nombre="Audífonos Pro" 
-                        data-precio="89">
-                    Añadir al Carrito
-                </button>
-            </article>
-
-            <article class="producto">
-                <img src="https://images.unsplash.com/photo-1526170315870-ef6897348226?auto=format&fit=crop&w=300&q=80" alt="Cámara Vintage">
-                <h3>Cámara Vintage</h3>
-                <p>Captura momentos únicos.</p>
-                <div class="precio-tag">$150.00</div>
-                <button class="btn-add" 
-                        data-id="3" 
-                        data-nombre="Cámara Vintage" 
-                        data-precio="150">
-                    Añadir al Carrito
-                </button>
-            </article>
-        </section>
-
-        <aside id="carrito-container">
-            <h2>Tu Pedido</h2>
-            <div class="carrito-body">
-                <ul id="lista-carrito">
-                    <p style="color: #64748b; text-align: center;">El carrito está vacío</p>
-                </ul>
-                
-                <hr>
-                
-                <div class="total-container">
-                    <span>Total a pagar:</span>
-                    <span>$<span id="total-pago">0.00</span></span>
+    <section id="trabajo" class="work-section">
+        <div class="container">
+            <h2>Nuestro trabajo: Esquema</h2> <div class="work-grid">
+                <div class="card">
+                    <div class="card-number">01</div>
+                    <h3>Background</h3> <p>Brindamos una visión general de su proyecto, abordando la marca del cliente y el desafío principal[cite: 13].</p>
                 </div>
 
-                <button id="vaciar-carrito">Limpiar Carrito</button>
-                
-                <button id="btn-checkout" style="background-color: #10b981; color: white; border: none; width: 100%; padding: 1rem; border-radius: 6px; margin-top: 10px; cursor: pointer; font-weight: bold;">
-                    Finalizar Compra
-                </button>
+                <div class="card">
+                    <div class="card-number">02</div>
+                    <h3>Solution</h3> <p>Exponemos cómo resolvemos el desafío y cómo nuestro trabajo ayuda directamente al cliente[cite: 16, 18].</p>
+                </div>
             </div>
-        </aside>
-    </main>
+        </div>
+    </section>
+
+    <section class="gallery-section">
+        <h2>Ejemplos de creaciones personalizadas</h2> <div class="gallery-grid">
+            <div class="gallery-item">Recuerdos [cite: 48]</div>
+            <div class="gallery-item">Útil pero creativo [cite: 49]</div>
+            <div class="gallery-item">Celebrar [cite: 50]</div>
+            <div class="gallery-item">Único [cite: 51]</div>
+        </div>
+    </section>
+
+    <aside id="carrito-container">
+        <h2>Tu Pedido: Schematiq Plus+</h2> <ul id="lista-carrito">
+            <p>No hay diseños seleccionados.</p>
+        </ul>
+        <div class="total-container">
+            <span>Total:</span>
+            <span>$<span id="total-pago">0</span></span>
+        </div>
+        <button id="vaciar-carrito">Limpiar Pedido</button>
+    </aside>
 
     <footer>
-        <p>&copy; 2025 Mi Tienda Online - Creado con Código Propio</p>
+        <p>Studio3DW - Animando una pasión [cite: 52]</p>
     </footer>
 
     <script src="script.js"></script>
