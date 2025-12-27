@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Tienda Económica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mi Tienda Online</h1>
+    </header>
+
+    <main>
+        <section id="productos">
+            <div class="producto">
+                <img src="https://via.placeholder.com/150" alt="Producto">
+                <h3>Camiseta Pro</h3>
+                <p>Precio: $<span>20</span></p>
+                <button class="btn-add" data-id="1" data-nombre="Camiseta Pro" data-precio="20">Añadir al Carrito</button>
+            </div>
+        </section>
+
+        <aside id="carrito-container">
+            <h2>Tu Carrito</h2>
+            <ul id="lista-carrito">
+                </ul>
+            <p>Total: $<span id="total-pago">0</span></p>
+            <button id="vaciar-carrito">Vaciar</button>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
